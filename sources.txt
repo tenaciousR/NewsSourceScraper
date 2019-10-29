@@ -1,0 +1,1 @@
+{"cnbc": {"link": "https://www.cnbc.com/us-news/"}, "nbcnews": {"link": "http://www.nbcnews.com/"}, "yahoo": {"link": "https://news.yahoo.com/"}, "washingtonpost": {"link": "https://www.washingtonpost.com/"}}
