@@ -4,6 +4,7 @@ import newspaper
 from newspaper import Article
 from time import mktime
 from datetime import datetime
+import re
 
 # This sets the limit for how many articles are downloaded per URL
 LIMIT = 5
@@ -60,6 +61,13 @@ for company, value in companies.items():
     count = 1
     data['newspapers'][company] = newsPaper
 
+     # This will remove any HTML tags from the scraped article
+    TAG_RE = re.compile(r'<[^>]+>')
+
+
+    def remove_tags(text):
+        return TAG_RE.sub('', text)
+    
 # Articles are saved in a JSON file
 try:
     with open("scraped_articles.json", "w") as outfile:
